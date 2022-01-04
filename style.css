@@ -1,0 +1,128 @@
+/* Start Global Rules */
+:root {
+    --Soft-violet: hsl(277, 64%, 61%);
+    --Slightly-transparent: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-2: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    font-family: "inter", sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* End Global Rules */
+
+/*=============================
+    Start Card
+=============================*/
+
+.card {
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 8px;
+}
+
+
+.card .image {
+    position: relative;
+}
+
+.card .image::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--Soft-violet);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 8px 8px 0;
+    opacity: 0.75;
+}
+
+.card .image img {
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    max-width: 100%;
+}
+
+/* Text */
+.card .text {
+    padding: 50px 60px;
+    color: white;
+}
+
+.card .text h1 {
+    max-width: 400px;
+}
+
+.card .text h1 span {
+    color: var(--Soft-violet);
+}
+
+.card .text>p {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-top: 20px;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* Stats */
+.card .text .stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card .text .stats .stat {
+    margin-bottom: 20px;
+}
+
+.card .text .stats .stat h3 {
+    font-size: 25px;
+}
+
+.card .text .stats .stat p {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+    .card {
+        display: block;
+    }
+
+    .card .text {
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    .card .image img {
+        border-radius: 8px 8px 0 0;
+    }
+    .card .text h1,
+    .card .text p {
+        margin: 15px auto;
+    }
+}
+
+/*=============================
+    End Card
+=============================*/
